@@ -174,7 +174,10 @@ const gchar *plugin_name(void)
 const gchar *plugin_desc(void)
 {
   return _("This plugin provides Gnome integration features.\n"
-           "Feedback to <berndth@gmx.de> is welcome.");
+	   "Currently, the only implemented functionality is to "
+	   "include the Gnome addressbook in Claws Mail's address "
+	   "completion.\n"
+           "\nFeedback to <berndth@gmx.de> is welcome.");
 }
 
 const gchar *plugin_type(void)
