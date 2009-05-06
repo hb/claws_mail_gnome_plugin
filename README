@@ -1,0 +1,4 @@
+This plugin collects Gnome integration features. The only
+currently working functionality is adding the Gnome addressbook
+to the address completion.
+
