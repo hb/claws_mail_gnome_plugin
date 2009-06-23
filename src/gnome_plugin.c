@@ -162,8 +162,11 @@ gboolean plugin_done(void)
     eds_book = NULL;
   }
 
-  debug_print("Gnome plugin unloaded\n");
-  return TRUE;
+  /* Returning FALSE here means that g_module_close() will not be called on the plugin.
+   * This is necessary, as libebook is not designed to be unloaded (static type registration,
+   * async callbacks registered in the main loop without a finalize() cleanup function etc.). */
+  debug_print("Gnome plugin done and hidden.\n");
+  return FALSE;
 }
 
 const gchar *plugin_name(void)
