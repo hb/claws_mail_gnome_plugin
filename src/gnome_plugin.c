@@ -83,7 +83,7 @@ static void add_gnome_addressbook(GList **address_list)
 
   /* create book accessor if necessary */
   if(!eds_book) {
-    eds_book = e_book_new_system_addressbook(&error);
+    eds_book = e_book_new_default_addressbook(&error);
     if(!eds_book) {
       debug_print("Error: Could not get eds addressbook: %s\n", error->message);
       g_error_free(error);
